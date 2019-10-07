@@ -1,0 +1,28 @@
+
+<html>
+<head>
+<style>
+      body{
+       
+        background: url(https://3.bp.blogspot.com/-YGeLk4geUFg/W8TY2qbWgMI/AAAAAAAAEfc/Ua-3NhNGRSk3pcsxenyprpipPoQx9lFfACLcBGAs/s1600/1537820530470.jpg);
+        background-color: #444; 
+         
+      
+      }
+
+      .vertical-offset-100{
+        padding-top:100px;
+      }
+</style>
+</head>
+<body>
+<% @anime.each do |a| %>
+<h1><ul><%= link_to image_tag(a.photo_url, height: '120', width: '166'), anime_path(a) %></ul></h1>
+
+<%end%> 
+
+
+</body>
+</html>
+
+

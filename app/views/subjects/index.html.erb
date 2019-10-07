@@ -1,0 +1,29 @@
+
+<html>
+<head>
+<style>
+      body{
+       
+        background: url(https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+        background-color: #444; 
+        background-position: center;
+        background-size: cover;
+         
+      
+      }
+
+      .vertical-offset-100{
+        padding-top:100px;
+      }
+</style>
+</head>
+<body>
+<h2><%@index.each do |p|%>
+
+<%=link_to p.name, subject_path(p.id)%>
+<li><%=p.description%></li>
+<%end%></h2>
+
+</body>
+</html>
+

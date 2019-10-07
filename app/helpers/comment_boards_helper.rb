@@ -1,0 +1,2 @@
+module CommentBoardsHelper
+end

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Omni</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <body background="banter-snaps-Np1aN841iAU-unsplash (1).jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.button {
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color: #EEEEEE;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+.footer{
+position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  
+}
+</style>
+
+  </head>
+
+  <body>
+  
+
+    <%= yield %>
+
+  <div class = "footer" ><h1><% if logged_in? %>
+  <%= button_to "Logout", sessions_path, method: :delete %>
+
+<% end %></h1></div>
+
+  </body>
+</html>

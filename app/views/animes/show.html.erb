@@ -1,0 +1,25 @@
+<header> <h1>Welcome to the <%=@anime.name%> page </h1></header> 
+<nav> <%=link_to "Home", user_path%>           <%=link_to  "Omni" , subjects_path%></nav> 
+<h1><%=image_tag @anime.photo_url, height: '240', width: '332'%></h1>
+<h3>Anime Rating : <%=@anime.rating%></h3>
+
+<% @comments.each do |p|%>
+
+<li> 
+<% user = User.find(p.user_id)%>
+@<%=user.user_name%>:
+<%= p.comment%>
+
+</li>
+<%end%>
+
+<%= form_for @new_comment do |f| %>
+  <%= f.hidden_field :user_id, value: @current_user.id %>
+  <%= f.hidden_field :anime_id, value: @anime.id %>
+
+  <%= f.label :comment, "Make a Post:" %>
+  <%=f.text_area :comment, size: "24x6" %>
+  <%= f.submit "post" %>
+<% end %>
+
+

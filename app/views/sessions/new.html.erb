@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+      body{
+       
+        background: url(https://images.unsplash.com/photo-1512868567929-384904a22a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+        background-color: #444; 
+         
+      
+      }
+
+      .vertical-offset-100{
+        padding-top:100px;
+      }
+</style>
+</head>
+<body>
+<%= form_tag sessions_path do %>
+  <%= label_tag "User_name" %>
+  <%= text_field_tag :user_name %>
+  <%= label_tag "Password" %>
+  <%= password_field_tag :password %>
+                             
+  <%= submit_tag "Create login" %>
+<% end %>
+<h1><%=link_to "create user ", new_user_path%></h1>
+<br></br>
+</body>
+</html>
