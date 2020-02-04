@@ -1,5 +1,5 @@
 <header> <h1>Welcome to the <%=@anime.name%> page </h1></header> 
-<nav> <%=link_to "Home", user_path%>           <%=link_to  "Omni" , subjects_path%></nav> 
+<nav> <%=link_to "Home", user_path%>           <%=link_to  "Omni" , animes_path%></nav> 
 <h1><%=image_tag @anime.photo_url, height: '240', width: '332'%></h1>
 <h3>Anime Rating : <%=@anime.rating%></h3>
 
